@@ -8,8 +8,13 @@ You can simply drop any meta-files (.json file) into a directory (**/threats/fil
 
 This program developed in **Python 2.7.10** and **Django 1.10.1**
 
+If you don’t’ have Django on your machine, you can install it by following this instruction:
+https://docs.djangoproject.com/en/1.10/topics/install/
+
+If you are using Mac, by default Python is installed on your machine.
+
 Clone or download the program from GitHub and run the following command:
 
-    `python manage.py runserver`
+    python manage.py runserver
 
 Now that the server’s running, visit **http://127.0.0.1:8000/threats/** with your Web browser.
