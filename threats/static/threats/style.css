@@ -1,0 +1,19 @@
+.container {
+    max-width: 90rem;
+}
+th:hover{
+    cursor: pointer;
+}
+
+.alertMessage {
+    color: #d9534f;
+    display: none;
+}
+
+.alertError {
+    position: fixed;
+    left:50%;
+    top: 4%;
+    color: red;
+    display: none;
+}

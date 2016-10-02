@@ -1,0 +1,59 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'threats/style.css' %}" />
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+<div class="container">
+    <div class="header clearfix">
+        <span class="alertError">* Error on reading resource files</span>
+        <h1 class="display-3">Threats</h1>
+    </div>
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-4">
+                <p>
+                    <span class="glyphicon glyphicon-filter" aria-hidden="true"></span>
+                    Filter  
+                    <select id="filterDate">
+                        <option value="all" selected>All</option> 
+                        <option value="24hours">24-hours</option> 
+                        <option value="7days">7 days</option>
+                        <option value="4weeks">4 weeks</option>
+                    </select>
+                </p>
+            </div>
+            <div class="col-md-8 text-right">
+                <span class="alertMessage">Press refresh button to reload the table</span>
+                <button id="refreshBtn" type="button" class="btn btn-default">Refresh</button>
+            </div>
+        </div>
+        <hr>
+        <div id="dataDv" class="table-responsive">
+            <table id="threatTable" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th data-sort="date">Date</th>
+                        <th data-sort="string-ins">File Name</th>
+                        <th data-sort="string-ins">Action</th>
+                        <th data-sort="string-ins">Submit-type</th>
+                        <th data-sort="string-ins">Rating</th>
+                    </tr>
+                </thead>
+                <tbody id="results">
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+
+    <footer class="footer">
+        <p>© by Abozar Rahimi</p>
+    </footer>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript" src="{% static 'threats/app.js' %}"></script>
+<script type="text/javascript" src="{% static 'threats/stupidtable.js' %}"></script>
